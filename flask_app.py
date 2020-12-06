@@ -41,7 +41,7 @@ def home():
                 <br>
                 <h1 style="color:white; b">Welcome to my personal website!</h1>
             </body>
-            </html>
+        </html>
     '''
 
 @app.route('/about')
