@@ -84,7 +84,7 @@ def about():
                 <p style="color:white;">In January 2021, I am going to be attending the <a href="https://www.thedataincubator.com/">Data Incubator Fellowship</a>, a prestigous data science bootcamp. It has a 3 percent acceptance rate. It usally only accepts STEM Master's and STEM PHD's, but I still got accepted despite only having a bachelor's degree. The interview process included an intensive coding challenge.</p>
                 <p style="color:white;">I found my passion for data science as an economic research analyst with the <a href="https://uww.edu/ferc">Fiscal and Economic Research Center</a> of <a href="https://uww.edu/">University of Wisconsin-Whitewater</a>. As an economic research analyst, I use Stata and R to conduct regression analysis.</p>
                 <br>
-                <p style="color:white;">I am currently seeking entry level data analyst, analytics analyst, and data scientist oppurtunites. The data science fellowship I will be attending ends March 5th, so I will be available then to start working.</p>
+                <p style="color:white;">I am currently seeking entry level data analyst, analytics analyst, and data scientist opportunities. The data science fellowship I will be attending ends March 5th, so I will be available then to start working.</p>
                 <br>
                 <p style="color:white;">I hope you enjoy my website!</p>
             </body>
