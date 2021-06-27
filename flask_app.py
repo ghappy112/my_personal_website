@@ -25,7 +25,7 @@ def home():
             </style>
             <body style="background-color:black;">
                 <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Aspiring Data Scientist</h1>
+                <h1 style="color:white; b">Junior Data Scientist</h1>
                 <form method="get" action="/about">
                     <button type="submit" class="button">About</button>
                 </form>
@@ -68,7 +68,7 @@ def about():
             </style>
             <body style="background-color:black;">
                 <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Aspiring Data Scientist</h1>
+                <h1 style="color:white; b">Junior Data Scientist</h1>
                 <form method="get" action="/coding_languages">
                     <button type="submit" class="button">Coding Languages</button>
                 </form>
@@ -79,12 +79,11 @@ def about():
                     <button type="submit" class="button">Contact</button>
                 </form>
                 <p style="color:white;">Hi! My name is Greg Happ!</p>
-                <p style="color:white;">I was born in Chicago, IL, and raised in Lake Geneva, WI.</p>
-                <p style="color:white;">I have passions for both coding and data science. My goal is to one day be a professional data scientist.</p>
-                <p style="color:white;">In January 2021, I am going to be attending the <a href="https://www.thedataincubator.com/">Data Incubator Fellowship</a>, a prestigous data science bootcamp. It has a 3 percent acceptance rate. It usally only accepts STEM Master's and STEM PHD's, but I still got accepted despite only having a bachelor's degree. The interview process included an intensive coding challenge.</p>
-                <p style="color:white;">I found my passion for data science as an economic research analyst with the <a href="https://uww.edu/ferc">Fiscal and Economic Research Center</a> of <a href="https://uww.edu/">University of Wisconsin-Whitewater</a>. As an economic research analyst, I use Stata and R to conduct regression analysis.</p>
-                <br>
-                <p style="color:white;">I am currently seeking entry level data analyst, analytics analyst, and data scientist opportunities. The data science fellowship I will be attending ends March 5th, so I will be available then to start working.</p>
+                <p style="color:white;">I was born in Chicago, IL, and raised in Lake Geneva, WI. I currently work remotely in Lake Geneva, but will eventually be moving to Milwaukee, WI, to work in person.</p>
+                <p style="color:white;">I have passions for both coding and data science.</p>
+                <p style="color:white;">From January to March 2021, I attended the <a href="https://www.credly.com/badges/5913ad7b-74b1-4bfb-be65-ffaf10e8d610?source=linked_in_profile/">Data Incubator Fellowship</a>, a prestigous data science bootcamp. It has a 2 percent acceptance rate. It usually only accepts STEM Master's and STEM PHD's, but I still got accepted despite only having a bachelor's degree. The interview process included an intensive coding challenge. We studied applied data science, machine learning, Python, SQL, and other in demand tools and technologies, and built a series of rigorous, business-focused projects using real-world, public data sets, and concentrated computer programming modules.</p>
+                <p style="color:white;">I found my passion for data science as an economic research analyst with the <a href="https://uww.edu/ferc">Fiscal and Economic Research Center</a> of <a href="https://uww.edu/">University of Wisconsin-Whitewater</a>. As an economic research analyst, I used Stata and R to conduct regression analysis. While attending Whitewater, I earned my Bachelor's of Science in Economics with a minor in Mathematics.</p>
+                <p style="color:white;">I recently joined Fidelity National Information Services (FIS)'s Global AI - Machine Learning and Data Science (AI/ML) Team as a Quantitative Analyst in a Junior Data Scientist role. I'm very excited to start, and can't wait to learn more about AI's role in the FinTech Industry!</p>
                 <br>
                 <p style="color:white;">I hope you enjoy my website!</p>
             </body>
@@ -115,7 +114,7 @@ def coding_languages():
             </style>
             <body style="background-color:black;">
                 <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Aspiring Data Scientist</h1>
+                <h1 style="color:white; b">Junior Data Scientist</h1>
                 <form method="get" action="/about">
                     <button type="submit" class="button">About</button>
                 </form>
@@ -127,9 +126,10 @@ def coding_languages():
                 </form>
                 <br>
                 <h1 style="color:#0062FF; b">Python</h1>
-                <h1 style="color:#FFFF00; b">SQL</h1>
                 <h1 style="color:#099FFF; b">R</h1>
                 <h1 style="color:#0033FF; b">Stata</h1>
+                <h1 style="color:#FFFF00; b">SQL</h1>
+                <h1 style="color:#ff5349; b">Spark</h1>
                 <h1 style="color:#ffa343; b">Java</h1>
                 <h1 style="color:#FF6600; b">HTML</h1>
                 <h1 style="color:#9D00FF; b">CSS</h1>
@@ -162,7 +162,7 @@ def projects():
             </style>
             <body style="background-color:black;">
                 <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Aspiring Data Scientist</h1>
+                <h1 style="color:white; b">Junior Data Scientist</h1>
                 <form method="get" action="/about">
                     <button type="submit" class="button">About</button>
                 </form>
@@ -203,7 +203,7 @@ def contact():
             </style>
             <body style="background-color:black;">
                 <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Aspiring Data Scientist</h1>
+                <h1 style="color:white; b">Junior Data Scientist</h1>
                 <form method="get" action="/about">
                     <button type="submit" class="button">About</button>
                 </form>
