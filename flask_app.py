@@ -6,7 +6,22 @@ app = Flask(__name__)
 def home():
     return '''
         <html>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            </head>
             <style>
+                /* Apply Roboto font to the body */
+                body {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                /* Apply Roboto to headings */
+                h1, h2, h3 {
+                    font-family: 'Roboto', sans-serif;
+                }
+
                 .button {
                     background-color: Transparent;
                     /*background-repeat: no-repeat;*/
@@ -23,24 +38,33 @@ def home():
                 form {
                     display: inline-block; //Or display: inline;
                 }
+
+                .left-justified-text {
+                    display: inline-block; /* Make the container adapt to its content */
+                    text-align: left; /* Left justify the text inside */
+                }
             </style>
             <body style="background-color:black;">
-                <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Data Science & Data Analytics</h1>
-                <form method="get" action="/about">
-                    <button type="submit" class="button">About</button>
-                </form>
-                <form method="get" action="/coding_languages">
-                    <button type="submit" class="button">Coding Languages</button>
-                </form>
-                <form method="get" action="/projects">
-                    <button type="submit" class="button">Personal Coding Projects</button>
-                </form>
-                <form method="get" action="/contact">
-                    <button type="submit" class="button">Contact</button>
-                </form>
-                <br>
-                <h1 style="color:white; b">Welcome to my personal website!</h1>
+                <div style="text-align: center;">
+                    <div class="left-justified-text">
+                        <h1 style="color:white;">Greg Happ</h1>
+                        <h1 style="color:white; b">Data Science & Data Analytics</h1>
+                        <form method="get" action="/about">
+                            <button type="submit" class="button">About</button>
+                        </form>
+                        <form method="get" action="/coding_languages">
+                            <button type="submit" class="button">Coding Languages</button>
+                        </form>
+                        <form method="get" action="/projects">
+                            <button type="submit" class="button">Portfolio</button>
+                        </form>
+                        <form method="get" action="/contact">
+                            <button type="submit" class="button">Contact</button>
+                        </form>
+                        <br>
+                        <h1 style="color:white; b">Welcome to my personal website!</h1>
+                    </div>
+                </div>
             </body>
         </html>
     '''
@@ -49,36 +73,61 @@ def home():
 def about():
     return '''
         <html>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            </head>
             <style>
-            .button {
-              background-color: Transparent;
-              /*background-repeat: no-repeat;*/
-              border-color: white;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            form {
-                display: inline-block; //Or display: inline;
-            }
+                /* Apply Roboto font to the body */
+                body {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                /* Apply Roboto to headings */
+                h1, h2, h3 {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .button {
+                  background-color: Transparent;
+                  /*background-repeat: no-repeat;*/
+                  border-color: white;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+                form {
+                    display: inline-block; //Or display: inline;
+                }
+
+                .left-justified-text {
+                    display: inline-block; /* Make the container adapt to its content */
+                    text-align: left; /* Left justify the text inside */
+                }
             </style>
             <body style="background-color:black;">
-                <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Data Science & Data Analytics</h1>
-                <form method="get" action="/coding_languages">
-                    <button type="submit" class="button">Coding Languages</button>
-                </form>
-                <form method="get" action="/projects">
-                    <button type="submit" class="button">Personal Coding Projects</button>
-                </form>
-                <form method="get" action="/contact">
-                    <button type="submit" class="button">Contact</button>
-                </form>
+                <div style="text-align: center;">
+                    <div class="left-justified-text">
+                        <h1 style="color:white;">Greg Happ</h1>
+                        <h1 style="color:white; b">Data Science & Data Analytics</h1>
+                        <form method="get" action="/coding_languages">
+                            <button type="submit" class="button">Coding Languages</button>
+                        </form>
+                        <form method="get" action="/projects">
+                            <button type="submit" class="button">Portfolio</button>
+                        </form>
+                        <form method="get" action="/contact">
+                            <button type="submit" class="button">Contact</button>
+                        </form>
+                    </div>
+                </div>
+                    <br>
                 <p style="color:white;">Hi! My name is Greg Happ!</p>
                 <p style="color:white;">I was born in Chicago, IL, and raised in Lake Geneva, WI.</p>
                 <p style="color:white;">I love the outdoors and enjoy outdoor activities such as hiking, swimming, kayaking, paddleboarding, and recently even camping! I also like to play guitar.</p>
@@ -96,6 +145,11 @@ def about():
 def coding_languages():
     return '''
         <html>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            </head>
             <script>
                 function mainJSFunction() {
                     // Get the screen width and height
@@ -124,39 +178,60 @@ def coding_languages():
                 }
             </script>
             <style>
-            .button {
-              background-color: Transparent;
-              /*background-repeat: no-repeat;*/
-              border-color: white;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            form {
-                display: inline-block; //Or display: inline;
-            }
+                /* Apply Roboto font to the body */
+                body {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                /* Apply Roboto to headings */
+                h1, h2, h3 {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .button {
+                  background-color: Transparent;
+                  /*background-repeat: no-repeat;*/
+                  border-color: white;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+
+                form {
+                    display: inline-block; //Or display: inline;
+                }
+
+                .left-justified-text {
+                    display: inline-block; /* Make the container adapt to its content */
+                    text-align: left; /* Left justify the text inside */
+                }
             </style>
             <body onload="mainJSFunction()" style="background-color:black;">
-                <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Data Science & Data Analytics</h1>
-                <form method="get" action="/about">
-                    <button type="submit" class="button">About</button>
-                </form>
-                <form method="get" action="/projects">
-                    <button type="submit" class="button">Personal Coding Projects</button>
-                </form>
-                <form method="get" action="/contact">
-                    <button type="submit" class="button">Contact</button>
-                </form>
-                <br>
                 <div style="text-align: center;">
+                    <div class="left-justified-text">
+                        <h1 style="color:white;">Greg Happ</h1>
+                        <h1 style="color:white; b">Data Science & Data Analytics</h1>
+                        <form method="get" action="/about">
+                            <button type="submit" class="button">About</button>
+                        </form>
+                        <form method="get" action="/projects">
+                            <button type="submit" class="button">Portfolio</button>
+                        </form>
+                        <form method="get" action="/contact">
+                            <button type="submit" class="button">Contact</button>
+                        </form>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <h1 style="color:white;">Coding Languages</h1>
+                    <br>
                     <iframe id="iframeID" frameborder="0" src="https://ghappy112.shinyapps.io/coding_skills/"></iframe>
-                    <h2 style="color:white;">Filter Panel Toggle on Bottom Left of Dashboard</h2>
+                    <h2 style="color:white;">Filter Panel Toggle in Bottom Left Corner of Dashboard</h2>
                     <br>
                     <h1><a href="https://github.com/ghappy112/R_Shiny_dashboards_ghappy112/tree/main/coding_skills">GitHub for this Shiny Dashboard</a></h1>
                 </div>
@@ -168,44 +243,68 @@ def coding_languages():
 def projects():
     return '''
         <html>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            </head>
             <style>
-            .button {
-              background-color: Transparent;
-              /*background-repeat: no-repeat;*/
-              border-color: white;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            form {
-                display: inline-block; //Or display: inline;
-            }
+                /* Apply Roboto font to the body */
+                body {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                /* Apply Roboto to headings */
+                h1, h2, h3 {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .button {
+                  background-color: Transparent;
+                  /*background-repeat: no-repeat;*/
+                  border-color: white;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+                form {
+                    display: inline-block; //Or display: inline;
+                }
+
+                .left-justified-text {
+                    display: inline-block; /* Make the container adapt to its content */
+                    text-align: left; /* Left justify the text inside */
+                }
             </style>
             <body style="background-color:black;">
-                <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Data Science & Data Analytics</h1>
-                <form method="get" action="/about">
-                    <button type="submit" class="button">About</button>
-                </form>
-                <form method="get" action="/coding_languages">
-                    <button type="submit" class="button">Coding Languages</button>
-                </form>
-                <form method="get" action="/contact">
-                    <button type="submit" class="button">Contact</button>
-                </form>
-                <br>
-                <h1><a href="https://ghappy112.pythonanywhere.com/reddit_political_sentiment_analysis">Reddit Political Sentiment Analysis Dashboard</a></h1>
-                <br>
-                <h1><a href="https://github.com/ghappy112/">GitHub</a></h1>
-                <br>
-                <h1><a href="https://public.tableau.com/app/profile/greg1281/vizzes">Tableau Dashboards</a></h1>
-                <br>
-                <h1><a href="https://ghappy112.pythonanywhere.com/shiny_dashboards">Shiny Dashboards</a></h1>
+                <div style="text-align: center;">
+                    <div class="left-justified-text">
+                        <h1 style="color:white;">Greg Happ</h1>
+                        <h1 style="color:white; b">Data Science & Data Analytics</h1>
+                        <form method="get" action="/about">
+                            <button type="submit" class="button">About</button>
+                        </form>
+                        <form method="get" action="/coding_languages">
+                            <button type="submit" class="button">Coding Languages</button>
+                        </form>
+                        <form method="get" action="/contact">
+                            <button type="submit" class="button">Contact</button>
+                        </form>
+                        <br>
+                        <h1><a href="https://github.com/ghappy112/">GitHub</a></h1>
+                        <br>
+                        <h1><a href="https://ghappy112.pythonanywhere.com/reddit_political_sentiment_analysis">Reddit Political Sentiment Analysis Dashboard</a></h1>
+                        <br>
+                        <h1><a href="https://ghappy112.pythonanywhere.com/shiny_dashboards">Shiny Dashboards</a></h1>
+                        <br>
+                        <h1><a href="https://public.tableau.com/app/profile/greg1281/vizzes">Tableau Dashboards</a></h1>
+                    </div>
+                </div>
             </body>
         </html>
     '''
@@ -214,40 +313,64 @@ def projects():
 def contact():
     return '''
         <html>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            </head>
             <style>
-            .button {
-              background-color: Transparent;
-              /*background-repeat: no-repeat;*/
-              border-color: white;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            form {
-                display: inline-block; //Or display: inline;
-            }
+                /* Apply Roboto font to the body */
+                body {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                /* Apply Roboto to headings */
+                h1, h2, h3 {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .button {
+                  background-color: Transparent;
+                  /*background-repeat: no-repeat;*/
+                  border-color: white;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+                form {
+                    display: inline-block; //Or display: inline;
+                }
+
+                .left-justified-text {
+                    display: inline-block; /* Make the container adapt to its content */
+                    text-align: left; /* Left justify the text inside */
+                }
             </style>
             <body style="background-color:black;">
-                <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Data Science & Data Analytics</h1>
-                <form method="get" action="/about">
-                    <button type="submit" class="button">About</button>
-                </form>
-                <form method="get" action="/coding_languages">
-                    <button type="submit" class="button">Coding Languages</button>
-                </form>
-                <form method="get" action="/projects">
-                    <button type="submit" class="button">Personal Coding Projects</button>
-                </form>
-                <br>
-                <h1><a href="https://www.linkedin.com/in/gregory-happ-7bb578138/">Connect with me on LinkedIn!</a></h1>
-                <br>
-                <h1><a href="mailto: [greghapp700@gmail.com]?subject= &body=">Email Me!</a></h1>
+                <div style="text-align: center;">
+                    <div class="left-justified-text">
+                        <h1 style="color:white;">Greg Happ</h1>
+                        <h1 style="color:white; b">Data Science & Data Analytics</h1>
+                        <form method="get" action="/about">
+                            <button type="submit" class="button">About</button>
+                        </form>
+                        <form method="get" action="/coding_languages">
+                            <button type="submit" class="button">Coding Languages</button>
+                        </form>
+                        <form method="get" action="/projects">
+                            <button type="submit" class="button">Portfolio</button>
+                        </form>
+                        <br>
+                        <h1><a href="https://www.linkedin.com/in/gregory-happ-7bb578138/">Connect with me on LinkedIn!</a></h1>
+                        <br>
+                        <h1><a href="mailto: [greghapp700@gmail.com]?subject= &body=">Email Me!</a></h1>
+                    </div>
+                </div>
             </body>
         </html>
     '''
@@ -255,6 +378,11 @@ def contact():
 @app.route("/reddit_political_sentiment_analysis")
 def reddit_political_sentiment():
     html = '''
+        <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        </head>
         <script>
             function mainJSFunction() {
                 // Get the screen width and height
@@ -282,6 +410,22 @@ def reddit_political_sentiment():
                 iframe.height = height;
             }
         </script>
+        <style>
+            /* Apply Roboto font to the body */
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            /* Apply Roboto to headings */
+            h1, h2, h3 {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .left-justified-text {
+                display: inline-block; /* Make the container adapt to its content */
+                text-align: left; /* Left justify the text inside */
+            }
+        </style>
         <body onload="mainJSFunction()">
             <div style="text-align:center;">
                 <h1>Political Candidates' Reddit Sentiment Dashboard</h1>
@@ -299,14 +443,20 @@ def reddit_political_sentiment():
 def shiny_dashboards():
     return '''
         <html>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            </head>
             <script>
                 function mainJSFunction() {
                     // Get the screen width and height
                     const screenWidth = window.innerWidth;
                     const screenHeight = window.innerHeight;
 
-                    // Get iframe ID
-                    var iframe = document.getElementById('iframeID')
+                    // Get iframes IDs
+                    var iframe1 = document.getElementById('iframeID1')
+                    var iframe2 = document.getElementById('iframeID2')
 
                     // Set width and height
                     var width = screenWidth;
@@ -321,41 +471,66 @@ def shiny_dashboards():
                         var width = 600
                     }
 
-                    // Set iframe width and height
-                    iframe.width = width;
-                    iframe.height = height;
+                    // Set iframes widths and heights
+                    iframe1.width = width;
+                    iframe1.height = height;
+                    iframe2.width = width;
+                    iframe2.height = height;
                 }
             </script>
             <style>
-            .button {
-              background-color: Transparent;
-              /*background-repeat: no-repeat;*/
-              border-color: white;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            form {
-                display: inline-block; //Or display: inline;
-            }
+                /* Apply Roboto font to the body */
+                body {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                /* Apply Roboto to headings */
+                h1, h2, h3 {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .button {
+                  background-color: Transparent;
+                  /*background-repeat: no-repeat;*/
+                  border-color: white;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+
+                form {
+                    display: inline-block; //Or display: inline;
+                }
+
+                .left-justified-text {
+                    display: inline-block; /* Make the container adapt to its content */
+                    text-align: left; /* Left justify the text inside */
+                }
             </style>
             <body onload="mainJSFunction()" style="background-color:black;">
-                <h1 style="color:white;">Greg Happ</h1>
-                <h1 style="color:white; b">Data Science & Data Analytics</h1>
-                <form method="get" action="/about">
-                    <button type="submit" class="button">About</button>
-                </form>
-                <form method="get" action="/projects">
-                    <button type="submit" class="button">Personal Coding Projects</button>
-                </form>
-                <form method="get" action="/contact">
-                    <button type="submit" class="button">Contact</button>
-                </form>
+                <div style="text-align: center;">
+                    <div class="left-justified-text">
+                        <h1 style="color:white;">Greg Happ</h1>
+                        <h1 style="color:white; b">Data Science & Data Analytics</h1>
+                        <form method="get" action="/about">
+                            <button type="submit" class="button">About</button>
+                        </form>
+                        <form method="get" action="/coding_languages">
+                            <button type="submit" class="button">Coding Languages</button>
+                        </form>
+                        <form method="get" action="/projects">
+                            <button type="submit" class="button">Personal Coding Projects</button>
+                        </form>
+                        <form method="get" action="/contact">
+                            <button type="submit" class="button">Contact</button>
+                        </form>
+                    </div>
+                </div>
                 <br>
                 <div style="text-align: center;">
                     <h1 style="color:white;">Shiny Dashboards</h1>
@@ -363,8 +538,14 @@ def shiny_dashboards():
                     <br>
                     <br>
                     <br>
-                    <iframe id="iframeID" frameborder="0" src="https://ghappy112.shinyapps.io/coding_skills/"></iframe>
-                    <h2 style="color:white;">Filter Panel Toggle on Bottom Left of Dashboard</h2>
+                    <iframe id="iframeID1" frameborder="0" src="https://ghappy112.shinyapps.io/Super_Store/"></iframe>
+                    <br>
+                    <h1><a href="https://github.com/ghappy112/R_Shiny_dashboards_ghappy112/tree/main/super_store">GitHub for this Dashboard</a></h1>
+                    <br>
+                    <br>
+                    <br>
+                    <iframe id="iframeID2" frameborder="0" src="https://ghappy112.shinyapps.io/coding_skills/"></iframe>
+                    <h2 style="color:white;">Filter Panel Toggle in Bottom Left Corner of Dashboard</h2>
                     <br>
                     <h1><a href="https://github.com/ghappy112/R_Shiny_dashboards_ghappy112/tree/main/coding_skills">GitHub for this Dashboard</a></h1>
                 </div>
