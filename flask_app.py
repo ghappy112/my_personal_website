@@ -78,6 +78,33 @@ def about():
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
             </head>
+            <script>
+                function mainJSFunction() {
+                    // Get the screen width and height
+                    const screenWidth = window.innerWidth;
+                    const screenHeight = window.innerHeight;
+
+                    // Get iframe ID
+                    var iframe = document.getElementById('iframeID')
+
+                    // Set width and height
+                    var width = screenWidth;
+                    var height = (373.5/600) * screenWidth;
+
+                    // Reset width and height if needed
+                    if (height > screenHeight) {
+                        var height = screenHeight
+                        var width = (600/373.5) * height
+                    } else if (height < 373.5) {
+                        var height = 373.5
+                        var width = 600
+                    }
+
+                    // Set iframe width and height
+                    iframe.width = width;
+                    iframe.height = height;
+                }
+            </script>
             <style>
                 /* Apply Roboto font to the body */
                 body {
@@ -111,11 +138,14 @@ def about():
                     text-align: left; /* Left justify the text inside */
                 }
             </style>
-            <body style="background-color:black;">
+            <body onload="mainJSFunction()" style="background-color:black;">
                 <div style="text-align: center;">
                     <div class="left-justified-text">
                         <h1 style="color:white;">Greg Happ</h1>
                         <h1 style="color:white; b">Data Science & Data Analytics</h1>
+                        <form method="get" action="/about">
+                            <button type="submit" class="button">About</button>
+                        </form>
                         <form method="get" action="/coding_languages">
                             <button type="submit" class="button">Coding Languages</button>
                         </form>
@@ -127,16 +157,14 @@ def about():
                         </form>
                     </div>
                 </div>
+                <div style="text-align: center;">
+                    <h1 style="color:white;">Get to Know Me Network Graph!</h1>
                     <br>
-                <p style="color:white;">Hi! My name is Greg Happ!</p>
-                <p style="color:white;">I was born in Chicago, IL, and raised in Lake Geneva, WI.</p>
-                <p style="color:white;">I love the outdoors and enjoy outdoor activities such as hiking, swimming, kayaking, paddleboarding, and recently even camping! I also like to play guitar.</p>
-                <p style="color:white;">I have passions for coding, economics, data science, artificial intelligence, and machine learning.</p>
-                <p style="color:white;">From January to March 2021, I attended the <a href="https://www.credly.com/badges/5913ad7b-74b1-4bfb-be65-ffaf10e8d610?source=linked_in_profile/">Data Incubator Fellowship</a>, a prestigous data science bootcamp. It has less than a 2 percent acceptance rate. It usually only accepts STEM Master's and STEM PhD's. The interview process included an intensive coding challenge. We studied applied data science, machine learning, Python, SQL, and other in demand tools and technologies, and built a series of rigorous, business-focused projects using real-world, public data sets, and concentrated computer programming modules.</p>
-                <p style="color:white;">I found my passion for data science as an economic research analyst with the <a href="https://uww.edu/ferc">Fiscal and Economic Research Center</a> of <a href="https://uww.edu/">University of Wisconsin-Whitewater</a>. As an economic research analyst, I used Stata and R to conduct regression analysis. While attending Whitewater, I earned my B.S. in Economics with a minor in Mathematics.</p>
-                <p style="color:white;">Then, for about 2 years and a half, I worked at Fidelity National Information Services (FIS)'s Global on the Artificial Intelligence (AI) - Machine Learning (ML) and Data Science Team as an AI/ML Quantitative Analyst in a Data Scientist role. As a Data Scientist, I used ML to develop AI integrated products and obtain data driven insights for FinTech solutions. I've worked on a variety of data science projects and solved them by utilizing a combination of my data science knowledge and by leveraging the AWS Data Science Stack, including SageMaker, Cloud9, CodeCommit, Lambda, EC2, S3, Glue, and Athena.</p>
-                <br>
-                <p style="color:white;">I hope you enjoy my website!</p>
+                    <iframe id="iframeID" frameborder="0" src="https://ghappy112.shinyapps.io/about_me_network_graph/"></iframe>
+                    <h2 style="color:white;">Filter Panel Toggle in Bottom Left Corner of Dashboard</h2>
+                    <br>
+                    <h1><a href="https://github.com/ghappy112/R_Shiny_dashboards_ghappy112/tree/main/about_me">GitHub for this Shiny Dashboard</a></h1>
+                </div>
             </body>
         </html>
     '''
@@ -219,6 +247,9 @@ def coding_languages():
                         <form method="get" action="/about">
                             <button type="submit" class="button">About</button>
                         </form>
+                        <form method="get" action="/coding_languages">
+                            <button type="submit" class="button">Coding Languages</button>
+                        </form>
                         <form method="get" action="/projects">
                             <button type="submit" class="button">Portfolio</button>
                         </form>
@@ -292,17 +323,20 @@ def projects():
                         <form method="get" action="/coding_languages">
                             <button type="submit" class="button">Coding Languages</button>
                         </form>
+                        <form method="get" action="/projects">
+                            <button type="submit" class="button">Portfolio</button>
+                        </form>
                         <form method="get" action="/contact">
                             <button type="submit" class="button">Contact</button>
                         </form>
                         <br>
-                        <h1><a href="https://github.com/ghappy112/">GitHub</a></h1>
+                        <h1>&#128187 <a href="https://github.com/ghappy112/">GitHub</a></h1>
                         <br>
-                        <h1><a href="https://ghappy112.pythonanywhere.com/reddit_political_sentiment_analysis">Reddit Political Sentiment Analysis Dashboard</a></h1>
+                        <h1>&#128202 <a href="https://ghappy112.pythonanywhere.com/reddit_political_sentiment_analysis">Reddit Political Sentiment Dashboard</a></h1>
                         <br>
-                        <h1><a href="https://ghappy112.pythonanywhere.com/shiny_dashboards">Shiny Dashboards</a></h1>
+                        <h1>&#128200 <a href="https://ghappy112.pythonanywhere.com/shiny_dashboards">Shiny Dashboards</a></h1>
                         <br>
-                        <h1><a href="https://public.tableau.com/app/profile/greg1281/vizzes">Tableau Dashboards</a></h1>
+                        <h1>&#128201 <a href="https://public.tableau.com/app/profile/greg1281/vizzes">Tableau Dashboards</a></h1>
                     </div>
                 </div>
             </body>
@@ -314,6 +348,7 @@ def contact():
     return '''
         <html>
             <head>
+                <meta charset="UTF-8">
                 <link rel="preconnect" href="https://fonts.googleapis.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -365,10 +400,13 @@ def contact():
                         <form method="get" action="/projects">
                             <button type="submit" class="button">Portfolio</button>
                         </form>
+                        <form method="get" action="/contact">
+                            <button type="submit" class="button">Contact</button>
+                        </form>
                         <br>
-                        <h1><a href="https://www.linkedin.com/in/gregory-happ-7bb578138/">Connect with me on LinkedIn!</a></h1>
+                        <h1>&#128101 <a href="https://www.linkedin.com/in/gregory-happ-7bb578138/">Connect with me on LinkedIn!</a></h1>
                         <br>
-                        <h1><a href="mailto: [greghapp700@gmail.com]?subject= &body=">Email Me!</a></h1>
+                        <h1>&#128231 <a href="mailto: [greghapp700@gmail.com]?subject= &body=">Email Me!</a></h1>
                     </div>
                 </div>
             </body>
@@ -429,7 +467,7 @@ def reddit_political_sentiment():
         <body onload="mainJSFunction()">
             <div style="text-align:center;">
                 <h1>Political Candidates' Reddit Sentiment Dashboard</h1>
-                <p>Dashboard updates every 3 hours with the latest Reddit data</p>
+                <!-- <p>Dashboard updates every 3 hours with the latest Reddit data</p> -->
                 <br>
                 <iframe title="candidate_reddit_political_sentiment_dashboard" id="powerBIiframeID" src="https://app.powerbi.com/view?r=eyJrIjoiOWI0MjY4Y2UtYTgzNi00MmMxLTlmNWUtY2U3NWNlY2FlYmI0IiwidCI6IjlhM2MyZTdmLWMyYTgtNDgyYy1hYjE0LWY5MzY1N2I3MWRjNCIsImMiOjF9" frameborder="0" allowFullScreen="true"></iframe>
                 <br>
@@ -457,6 +495,9 @@ def shiny_dashboards():
                     // Get iframes IDs
                     var iframe1 = document.getElementById('iframeID1')
                     var iframe2 = document.getElementById('iframeID2')
+                    var iframe3 = document.getElementById('iframeID3')
+                    var iframe4 = document.getElementById('iframeID4')
+                    var iframe5 = document.getElementById('iframeID5')
 
                     // Set width and height
                     var width = screenWidth;
@@ -476,6 +517,12 @@ def shiny_dashboards():
                     iframe1.height = height;
                     iframe2.width = width;
                     iframe2.height = height;
+                    iframe3.width = width;
+                    iframe3.height = height;
+                    iframe4.width = width;
+                    iframe4.height = height;
+                    iframe5.width = width;
+                    iframe5.height = height;
                 }
             </script>
             <style>
@@ -524,7 +571,7 @@ def shiny_dashboards():
                             <button type="submit" class="button">Coding Languages</button>
                         </form>
                         <form method="get" action="/projects">
-                            <button type="submit" class="button">Personal Coding Projects</button>
+                            <button type="submit" class="button">Portfolio</button>
                         </form>
                         <form method="get" action="/contact">
                             <button type="submit" class="button">Contact</button>
@@ -544,7 +591,27 @@ def shiny_dashboards():
                     <br>
                     <br>
                     <br>
-                    <iframe id="iframeID2" frameborder="0" src="https://ghappy112.shinyapps.io/coding_skills/"></iframe>
+                    <iframe id="iframeID2" frameborder="0" src="https://ghappy112.shinyapps.io/iris_clustering/"></iframe>
+                    <h2 style="color:white;">Filter Panel Toggle in Bottom Left Corner of Dashboard</h2>
+                    <br>
+                    <h1><a href="https://github.com/ghappy112/R_Shiny_dashboards_ghappy112/tree/main/iris_clustering">GitHub for this Dashboard</a></h1>
+                    <br>
+                    <br>
+                    <br>
+                    <iframe id="iframeID3" frameborder="0" src="https://ghappy112.shinyapps.io/lending_club/"></iframe>
+                    <br>
+                    <h1><a href="https://github.com/ghappy112/R_Shiny_dashboards_ghappy112/tree/main/lending_club">GitHub for this Dashboard</a></h1>
+                    <br>
+                    <br>
+                    <br>
+                    <iframe id="iframeID4" frameborder="0" src="https://ghappy112.shinyapps.io/about_me_network_graph/"></iframe>
+                    <h2 style="color:white;">Filter Panel Toggle in Bottom Left Corner of Dashboard</h2>
+                    <br>
+                    <h1><a href="https://github.com/ghappy112/R_Shiny_dashboards_ghappy112/tree/main/about_me">GitHub for this Dashboard</a></h1>
+                    <br>
+                    <br>
+                    <br>
+                    <iframe id="iframeID5" frameborder="0" src="https://ghappy112.shinyapps.io/coding_skills/"></iframe>
                     <h2 style="color:white;">Filter Panel Toggle in Bottom Left Corner of Dashboard</h2>
                     <br>
                     <h1><a href="https://github.com/ghappy112/R_Shiny_dashboards_ghappy112/tree/main/coding_skills">GitHub for this Dashboard</a></h1>
